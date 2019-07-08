@@ -67,7 +67,7 @@ import { Action, Mutation, State, Getter } from "vuex-class";
 @Component({
   components: {}
 })
-export default class Home extends Vue {
+export default class  extends Vue {
   private isCollapse: boolean = false;
   private collapse() {
       this.isCollapse = !this.isCollapse;

@@ -10,7 +10,7 @@ import '../public/css/icon.css';
   components: {
   },
 })
-export default class App extends Vue {
+export default class extends Vue {
 }
 </script>
 <style lang="scss">

@@ -75,7 +75,7 @@ import { Pagination } from '@/interface';
 @Component({
   components: {}
 })
-export default class Home extends Vue {
+export default class  extends Vue {
   @Action('bookList') private actionBookList;
   @Getter('bookList') private getterBookList;
   private bookListData = [];
