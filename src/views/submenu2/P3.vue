@@ -1,0 +1,13 @@
+<template>
+  <div>Page3</div>
+</template>
+<script lang='ts'>
+import { Component, Vue, Watch, Prop } from "vue-property-decorator";
+@Component({
+  components: {}
+})
+export default class Home extends Vue {
+}
+</script>
+<style lang="scss" scoped>
+</style>
