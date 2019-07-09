@@ -3,9 +3,10 @@ import Router from 'vue-router';
 import Layout from '@/views/Layout.vue';
 import Login from '@/views/Login.vue';
 import NotFound from '@/views/NotFound.vue';
-import P1 from '@/views/submenu1/P1.vue';
-import P2 from '@/views/submenu1/P2.vue';
-import P3 from '@/views/submenu2/P3.vue';
+import P1 from '@/views/userAdmin/P1.vue';
+import P2 from '@/views/userAdmin/P2.vue';
+import P3 from '@/views/agencyAdmin/P3.vue';
+import P4 from '@/views/productAdmin/P4.vue';
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -38,6 +39,11 @@ export default new Router({
           path: '/page3',
           name: '页面三',
           component: P3,
+        },
+        {
+          path: '/page4',
+          name: '页面四',
+          component: P4,
         },
       ]
     },

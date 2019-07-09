@@ -28,18 +28,25 @@
         >
           <el-submenu index="1">
             <template slot="title">
-              <i class="iconfont percy-icon-manage_icon_set"></i>
-              <span slot="title">二级菜单1</span>
+              <i class="iconfont percy-icon-yonghu"></i>
+              <span slot="title">用户管理</span>
             </template>
             <el-menu-item index="/page1">页面一</el-menu-item>
             <el-menu-item index="/page2">页面二</el-menu-item>
           </el-submenu>
-          <el-submenu index="2">
+           <el-submenu index="2">
             <template slot="title">
-              <i class="iconfont percy-icon-search"></i>
-              <span slot="title">二级菜单2</span>
+              <i class="iconfont percy-icon-dailishang"></i>
+              <span slot="title">代理商管理</span>
             </template>
             <el-menu-item index="/page3">页面三</el-menu-item>
+          </el-submenu>
+           <el-submenu index="3">
+            <template slot="title">
+              <i class="iconfont percy-icon-weibiaoti1"></i>
+              <span slot="title">产品管理</span>
+            </template>
+            <el-menu-item index="/page4">页面四</el-menu-item>
           </el-submenu>
         </el-menu>
         <section class="content-container">
@@ -87,6 +94,9 @@ export default class  extends Vue {
 }
 </script>
 <style scoped lang="scss">
+.iconfont{
+    margin-right:6px
+}
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
