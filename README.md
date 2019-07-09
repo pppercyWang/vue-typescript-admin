@@ -6,6 +6,9 @@
 
 ### 项目结构
 ```javascript
+public
+  css
+    icon.css ---iconfont的font-class引入
 src 
   api ---api接口
   assets ---静态资源
@@ -14,32 +17,33 @@ src
   utils
     http.ts ---封装了axios
   views ---视图
+interface.ts ---ts自定义类型
+main.ts ---程序主配置文件
+router.ts ---路由配置
 vue.config.js ---vue-cli3配置文件
 tsconfig.json ---ts配置文件
 tslint.json ---语法检查配置文件
 ```
- **在我的学习过程中。看过许多的前端工程化代码，各有千秋。我觉得项目的结构设计很重要！我觉得作为一个模板，最重要的就是简单易懂。我没有依赖很多的包，尽量保持代码的整洁干净。关于Vuex在单页面应用我也有自己的理解。大家可以参考我的这篇文章，如有不正，欢迎指正。qq：845082868。谢谢！**
+
+### vue + vuex + typescript + element-ui + axios 
+
+ **在我的学习过程中。看过许多的前端工程化代码，各有千秋。我觉得项目的结构设计很重要！我觉得作为一个模板，最重要的就是简单易懂。我没有依赖很多的包，尽量保持代码的整洁干净。关于Vuex在单页面应用的实践我也有自己的理解。并在项目中结构化。大家可以参考我的这篇文章，如有写的不好的地方，欢迎指正。qq：845082868。谢谢！**
  
- 文章地址：
+ **文章地址：https://blog.csdn.net/weixin_42565137/article/details/95168405**
  
 ![image](https://github.com/pppercyWang/vue-typescript-admin/blob/master/public/img/1562588125.jpg)
 
-### Poject setup
+### 运行项目
 ```
 npm install
 ```
 
-#### Compiles and hot-reloads for development
+#### 开发模式运行
 ```
 npm run serve
 ```
 
-#### Compiles and minifies for production
+#### 构建项目
 ```
 npm run build
-```
-
-#### Lints and fixes files
-```
-npm run lint
 ```
