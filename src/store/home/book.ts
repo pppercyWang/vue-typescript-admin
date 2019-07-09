@@ -24,7 +24,7 @@ const actions: any = {
     async bookList(context: { commit: Commit }, data: any) {
         console.log('通过action获取bookList数据');
         const res: any = await apiGetBookList(data, null);
-        res.Data.Page = data.page;
+        res.Data.Page = data.page; // 将页面信息同时储存到需要存在store中。场景，如果不存，每次进入这个页面。都会是page为1，size为10。用户体验不好
         res.Data.Size = data.size;
         context.commit('saveBookList', res.Data);
     },
