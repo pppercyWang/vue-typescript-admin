@@ -33,22 +33,17 @@ tslint.json ---语法检查配置文件
  
 ![image](https://github.com/pppercyWang/vue-typescript-admin/blob/master/public/img/1562588125.jpg)
 
-### Poject setup
+### 运行项目
 ```
 npm install
 ```
 
-#### Compiles and hot-reloads for development
+#### 开发模式运行
 ```
 npm run serve
 ```
 
-#### Compiles and minifies for production
+#### 构建项目
 ```
 npm run build
-```
-
-#### Lints and fixes files
-```
-npm run lint
 ```
