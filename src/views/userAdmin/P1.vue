@@ -4,7 +4,7 @@
       <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
         <el-form :inline="true">
           <el-form-item>
-            <el-button size="small" plain type="success">添加图书</el-button>
+            <el-button size="small" plain type="success" @click="addBook()">添加图书</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -20,8 +20,8 @@
         <el-table-column prop="Count" label="库存" align="center"></el-table-column>
         <el-table-column class="oprations" label="操作" width="290px" align="center">
           <template slot-scope="scope">
-            <el-button type="primary" size="mini" @click="handleEdit(scope.row)">编辑</el-button>
-            <el-button type="danger" size="mini" @click="handleDel(scope.row)">删除</el-button>
+            <el-button type="primary" size="mini" @click="editBook(scope.row)">编辑</el-button>
+            <el-button type="danger" size="mini" @click="delBook(scope.row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -38,26 +38,6 @@
           ></el-pagination>
         </div>
       </el-col>
-      <el-dialog :title="addFlag?'新增图书':'编辑图书'">
-        <el-form ref="form" label-width="80px">
-          <el-form-item label="名称" style="width:300px">
-            <el-input placeholder="请输入名称"></el-input>
-          </el-form-item>
-          <el-form-item label="作者" style="width:300px">
-            <el-input placeholder="请输入作者"></el-input>
-          </el-form-item>
-          <el-form-item label="类型" style="width:300px">
-            <el-input placeholder="请输入昵称"></el-input>
-          </el-form-item>
-          <el-form-item label="库存" style="width:300px">
-            <el-input placeholder="请输入昵称"></el-input>
-          </el-form-item>
-        </el-form>
-        <span slot="footer" class="dialog-footer">
-          <el-button>提交</el-button>
-          <el-button type="primary">取消</el-button>
-        </span>
-      </el-dialog>
     </section>
   </div>
 </template>
@@ -78,15 +58,19 @@ export default class extends Vue {
   private size: number = 10;
   private total: number = 0;
   private addFlag: boolean = false;
-  private handleEdit(row) {
+  private dialogVisible: boolean = false;
+  private addBook() {
+    this.$message.success("执行新增操作");
+  }
+  private editBook(row) {
     this.$message.success("执行编辑操作");
   }
-  private handleDel(row) {
+  private delBook(row) {
     this.$message.success("执行删除操作");
   }
   private handleSizeChange(val) {
     this.size = val;
-    this.actionClearBookList(); // 注意每次更改页面和更改Size都需要Clear旧数据，还有修改或新增某条数据时
+    this.actionClearBookList(); // 注意每次更改页面和更改Size都需要Clear旧数据，还有修改，新增，删除某条数据时
     this.getBookList();
   }
   private handlePageChange(val) {
