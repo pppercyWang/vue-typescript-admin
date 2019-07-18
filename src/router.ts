@@ -3,10 +3,8 @@ import Router from 'vue-router';
 import Layout from '@/views/Layout.vue';
 import Login from '@/views/Login.vue';
 import NotFound from '@/views/NotFound.vue';
-import P1 from '@/views/userAdmin/P1.vue';
-import P2 from '@/views/userAdmin/P2.vue';
-import P3 from '@/views/agencyAdmin/P3.vue';
-import P4 from '@/views/productAdmin/P4.vue';
+import BookTable from '@/views/bookAdmin/BookTable.vue';
+import Index from '@/views/indexPage/Index.vue';
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -26,24 +24,14 @@ export default new Router({
       redirect: { path: '/login'},
       children: [
         {
-          path: '/page1',
+          path: '/index',
           name: '首页',
-          component: P1,
+          component: Index,
         },
         {
-          path: '/page2',
-          name: '页面二',
-          component: P2,
-        },
-        {
-          path: '/page3',
-          name: '页面三',
-          component: P3,
-        },
-        {
-          path: '/page4',
-          name: '页面四',
-          component: P4,
+          path: '/book/index',
+          name: '图书管理',
+          component: BookTable,
         },
       ]
     },

@@ -32,7 +32,7 @@ export default class  extends Vue {
   private checkUser() {
     if (this.user === 'admin' && this.pwd === 'admin') {
       sessionStorage.setItem('token', 'token-fake');
-      this.$router.push({path: '/page1'});
+      this.$router.push({path: '/index'});
     }
   }
 }

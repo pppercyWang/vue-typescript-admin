@@ -31,7 +31,9 @@ tslint.json ---语法检查配置文件
  
  **文章地址：https://blog.csdn.net/weixin_42565137/article/details/95168405**
  
-![image](https://github.com/pppercyWang/vue-typescript-admin/blob/master/public/img/20190709121458.png)
+![image](https://github.com/pppercyWang/vue-typescript-admin/blob/master/public/img/20190718153324.png)
+
+![image](https://github.com/pppercyWang/vue-typescript-admin/blob/master/public/img/20190718153335.png)
 
 ### 运行项目
 ```
